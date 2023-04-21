@@ -23,6 +23,9 @@ async def on_message(message):
 
     elif message.content.startswith("$пока"):
         await message.channel.send("Досвиданья!")
+        
+    elif message.content.startswith("$coin"):
+        await message.channel.send(flip_coin())
 
     elif message.content == "$придумай пароль":
         await message.channel.send(gen_pass(10))
