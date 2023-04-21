@@ -1,5 +1,5 @@
 import discord
-from logic import gen_pass
+from logic import flip_coin, gen_pass
 
 # Переменная intents - хранит привилегии бота
 intents = discord.Intents.default()
