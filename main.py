@@ -1,5 +1,5 @@
 import discord
-from logic import flip_coin, gen_pass
+from logic import coin, gen_pass
 
 # Переменная intents - хранит привилегии бота
 intents = discord.Intents.default()
@@ -25,7 +25,7 @@ async def on_message(message):
         await message.channel.send("Досвиданья!")
         
     elif message.content.startswith("$coin"):
-        await message.channel.send(flip_coin())
+        await message.channel.send(coin())
 
     elif message.content == "$придумай пароль":
         await message.channel.send(gen_pass(10))
