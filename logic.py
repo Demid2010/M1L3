@@ -14,6 +14,6 @@ def gen_pass(pass_length):
 def flip():
     flip = random.randint(0, 1)
     if flip == 0:
-        return "ОРЕЛ"
+        return "ВАЛЮТА"
     else:
-        return "РЕШКА"
+        return "ГЕРБ"
