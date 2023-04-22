@@ -11,8 +11,7 @@ def gen_pass(pass_length):
     return password
 
 
-def flip_coin():
-    input("Орел или решка?:")
+def coin():
     flip = random.randint(0, 1)
     if flip == 0:
         return "ОРЕЛ"
