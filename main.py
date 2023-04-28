@@ -16,18 +16,18 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
     if message.content.startswith("$Привет"):
-        await message.channel.send("привки!")
+        await message.channel.send(f"{message.author.mention}привки!")
 
-    elif message.content.startswith("$пока"):
-        await message.channel.send("Досвиданья!")
-        
-    elif message.content.startswith("$coin"):
-        await message.channel.send(coin())
+    if message.content.startswith("$пока"):
+        await message.channel.send(f"{message.author.mention}Досвиданья!")
 
-    elif message.content == "$придумай пароль":
+    if message.content.startswith("$подброс монетки"):
+        await message.channel.send(f"{message.author.mention}")
+        await message.channel.send(flip_coin())
+
+    if message.content == "$придумай пароль":
+        await message.channel.send(f"{message.author.mention}")
         await message.channel.send(gen_pass(10))
 
 
